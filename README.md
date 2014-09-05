@@ -2,9 +2,7 @@
 
 ## Overview
 
-This repo is a skeleton/template repo for tracking dotfiles.  It contains
-a utility ([dfm](https://github.com/justone/dfm)) to help with managing and
-updating your dotfiles.
+My dotfiles, see [dfm](http://github.com/justone/dotfiles) to manage your own.
 
 ## Using this repo
 
