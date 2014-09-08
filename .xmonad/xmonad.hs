@@ -10,15 +10,16 @@ main = do
     xmonad $ defaultConfig
         { modMask = mod4Mask
         , terminal = "urxvt"
-        , normalBorderColor = "#cccccc"
-        , focusedBorderColor = "#cd8b00"
-        , borderWidth = 2
+        , normalBorderColor = "#505050"
+        , focusedBorderColor = "#90a959"
+        , borderWidth = 1
         , startupHook = setWMName "LG3D"
         , manageHook = manageDocks <+> manageHook defaultConfig
         , layoutHook = avoidStruts $ layoutHook defaultConfig
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc
-                        , ppTitle = xmobarColor "green" "" . shorten 50
+                        , ppTitle = xmobarColor "#90a959" "" . shorten 50
+                        , ppCurrent = xmobarColor "#90a959" ""
                         }
         } `additionalKeysP`
         [ ("M-<Left>", spawn "xdotool click 1")
