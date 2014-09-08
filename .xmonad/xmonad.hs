@@ -1,6 +1,7 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.SetWMName
 import XMonad.Util.EZConfig
 import XMonad.Util.Run
 
@@ -12,6 +13,7 @@ main = do
         , normalBorderColor = "#cccccc"
         , focusedBorderColor = "#cd8b00"
         , borderWidth = 2
+        , startupHook = setWMName "LG3D"
         , manageHook = manageDocks <+> manageHook defaultConfig
         , layoutHook = avoidStruts $ layoutHook defaultConfig
         , logHook = dynamicLogWithPP xmobarPP
