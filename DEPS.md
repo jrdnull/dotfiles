@@ -1,6 +1,6 @@
 ## Dependencies
 
 * URxvt
-* Google Chrome
+* Google Chrome (google-chrome on PATH)
 * feh (wallpaper)
-* unclutter (hide mouse cursor)
+
