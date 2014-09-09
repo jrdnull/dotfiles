@@ -3,7 +3,6 @@ xsetroot -cursor_name left_ptr
 xrdb -merge ~/.Xdefaults
 
 sh ~/.fehbg &
-unclutter -grab &
 
 trayer --edge top --align right --SetDockType true --SetPartialStrut true \
 --expand true --width 10 --transparent true --tint 0x151515 --alpha 0 --height 18 &
