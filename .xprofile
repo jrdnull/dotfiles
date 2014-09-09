@@ -1,5 +1,6 @@
 setxkbmap gb
 xsetroot -cursor_name left_ptr
+xset -b
 xrdb -merge ~/.Xdefaults
 
 sh ~/.fehbg &
