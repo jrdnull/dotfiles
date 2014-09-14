@@ -1,9 +1,3 @@
-# include what you want
-
 export PATH=$PATH:$HOME/bin:$HOME/.cask/bin
 
-# add this to the .bashrc: . $HOME/.bashrc.load
-
-####
-# put any bash customizations in here
-
+alias cmacs="emacs -nw"

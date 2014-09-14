@@ -1,7 +1,9 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.SetWMName
+import qualified XMonad.StackSet as W
 import XMonad.Util.EZConfig
 import XMonad.Util.Run
 
@@ -14,7 +16,10 @@ main = do
         , focusedBorderColor = "#90a959"
         , borderWidth = 2 
         , startupHook = setWMName "LG3D"
-        , manageHook = manageDocks <+> manageHook defaultConfig
+        , manageHook = composeAll
+	  [ manageDocks <+> manageHook defaultConfig
+	  , isFullscreen --> doFullFloat
+	  ]
         , layoutHook = avoidStruts $ layoutHook defaultConfig
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc
