@@ -12,7 +12,7 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-(load-theme 'spolsky t)
+(if window-system (load-theme 'spolsky t))
 
 (delete-selection-mode 1) ; text insert replace selection
 (show-paren-mode 1) ; highlight matching paren
