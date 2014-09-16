@@ -4,3 +4,4 @@ export EDITOR="emacs -nw"
 
 alias sudo="sudo "
 alias cmacs="emacs -nw"
+alias ssh="TERM=xterm-color ssh"
