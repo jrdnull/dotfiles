@@ -2,3 +2,4 @@ README.md skip
 DEPS.md skip
 .xmonad recurse
 .emacs.d recurse
+bin recurse
