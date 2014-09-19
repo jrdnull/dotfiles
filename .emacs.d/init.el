@@ -1,5 +1,14 @@
+;;; init.el --- Emacs config
+
+;;; Commentary:
+;;; Jordon Smith's Emacs config, you probably shouldn't use this
+
+;;; Code:
+
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
+
+(require 'pallet)
 
 (require 'tabbar)
 (tabbar-mode t)
@@ -8,11 +17,18 @@
 (require 'tabbar-ruler)
 (setq tabbar-ruler-global-tabbar t)
 
+(require 'projectile)
+(projectile-global-mode)
+
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-(load-theme 'zenburn t)
+(windmove-default-keybindings)
+
+(load-theme 'monokai t)
 
 (delete-selection-mode 1) ; text insert replace selection
 (show-paren-mode 1) ; highlight matching paren
@@ -33,4 +49,6 @@
     `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
     `((".*" ,temporary-file-directory t)))
+
+;;; init.el ends here
 
