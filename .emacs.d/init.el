@@ -20,6 +20,9 @@
 (require 'projectile)
 (projectile-global-mode)
 
+(require 'elixir-mode)
+
+
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 (menu-bar-mode -1)
@@ -39,16 +42,22 @@
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
 (setq vc-follow-symlinks t)
-(setq indent-tabs-mode nil)
-(setq c-basic-indent 2)
-(setq tab-width 4)
 (setq show-trailing-whitespace t)
 (setq linum-format 'dynamic)
+(setq require-final-newline t)
+(setq visible-bell t)
 
 (setq backup-directory-alist
-    `((".*" . ,temporary-file-directory)))
+      `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
-    `((".*" ,temporary-file-directory t)))
+      `((".*" ,temporary-file-directory t)))
+
+(setq-default indent-tabs-mode nil)
+
+(when (window-system)
+  (set-face-attribute 'default nil :font "Source Code Pro")
+  (set-frame-font "Source Code Pro" nil t))
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;;; init.el ends here
-

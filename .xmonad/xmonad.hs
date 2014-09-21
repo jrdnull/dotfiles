@@ -14,7 +14,7 @@ main = do
         , terminal = "urxvt"
         , normalBorderColor = "#505050"
         , focusedBorderColor = "#90a959"
-        , borderWidth = 2 
+        , borderWidth = 2
         , startupHook = setWMName "LG3D"
         , manageHook = composeAll
 	  [ manageDocks <+> manageHook defaultConfig
@@ -23,8 +23,8 @@ main = do
         , layoutHook = avoidStruts $ layoutHook defaultConfig
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc
-                        , ppTitle = xmobarColor "#90a959" "" . shorten 50
-                        , ppCurrent = xmobarColor "#90a959" ""
+                        , ppTitle = xmobarColor "#a6e22e" "" . shorten 50
+                        , ppCurrent = xmobarColor "#f92672" ""
                         }
         } `additionalKeysP`
         [ ("M-<Left>", spawn "xdotool click 1")
@@ -39,4 +39,3 @@ main = do
         , ("C-<Print>", spawn "sleep 0.2; scrot -s")
         , ("<Print>", spawn "scrot")
         ]
-
