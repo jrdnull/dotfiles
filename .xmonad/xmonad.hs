@@ -38,4 +38,6 @@ main = do
         , ("C-M-l", spawn "slock")
         , ("C-<Print>", spawn "sleep 0.2; scrot -s")
         , ("<Print>", spawn "scrot")
+	, ("M-p", spawn "dmenu_run -b")
+	, ("M-S-q", kill) -- I keep quitting because of i3wm reflexes
         ]
