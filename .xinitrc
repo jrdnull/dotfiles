@@ -11,4 +11,4 @@ fi
 [ -f ~/.xprofile ] && source ~/.xprofile
 
 start-pulseaudio-x11
-exec xmonad
+exec i3
