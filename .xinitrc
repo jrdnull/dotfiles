@@ -11,4 +11,6 @@ fi
 [ -f ~/.xprofile ] && source ~/.xprofile
 
 start-pulseaudio-x11
+eval $(ssh-agent)
+ssh-add
 exec i3
