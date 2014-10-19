@@ -21,9 +21,9 @@ set laststatus=2
 set number
 
 colorscheme molokai
-"let g:molokai_original=1
+let g:molokai_original=1
 let g:rehash256=1
-"set background=dark
+set background=dark
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
@@ -31,5 +31,5 @@ set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
 if has("gui_running")
-  set guifont=Source\ Code\ Pro\ 13
+  set guifont=Source\ Code\ Pro\ 10
 endif
