@@ -10,6 +10,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomasr/molokai'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 

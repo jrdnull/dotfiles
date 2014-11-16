@@ -1,7 +1,6 @@
-export PATH=$PATH:$HOME/bin:$HOME/.cask/bin
+export PATH=$PATH:$HOME/bin:$HOME/.rvm/bin
 
 export EDITOR="vim"
 
 alias sudo="sudo "
-alias cmacs="emacs -nw"
 alias ssh="TERM=xterm-color ssh"
