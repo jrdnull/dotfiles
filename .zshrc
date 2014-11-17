@@ -8,7 +8,7 @@ antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Work specific bundles
-if [[ $AT_WORK ]]; then
+if $AT_WORK; then
     antigen bundle symfony2
 fi
 
