@@ -31,6 +31,17 @@ set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
+match ErrorMsg '\s\+$'
+
 if has("gui_running")
   set guifont=Source\ Code\ Pro\ 10
 endif
+
+"remove trailing whitespace
+nnoremap <Leader>kw :%s/\s\+$//e<CR>
+
+nnoremap <leader>d :NERDTreeToggle<CR>
