@@ -20,6 +20,8 @@ syntax on
 set noswapfile
 set laststatus=2
 set number
+set ignorecase
+set smartcase
 
 colorscheme molokai
 let g:molokai_original=1

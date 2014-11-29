@@ -7,12 +7,7 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Work specific bundles
-if $AT_WORK; then
-    antigen bundle symfony2
-fi
+antigen theme risto
 
-antigen theme risto 
-
-antigen apply 
+antigen apply
 
