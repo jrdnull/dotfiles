@@ -11,6 +11,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomasr/molokai'
 Plugin 'scrooloose/nerdtree'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'wincent/command-t'
 
 call vundle#end()
 
@@ -37,13 +39,13 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
-match ErrorMsg '\s\+$'
 
 if has("gui_running")
   set guifont=Source\ Code\ Pro\ 10
 endif
 
-"remove trailing whitespace
-nnoremap <Leader>kw :%s/\s\+$//e<CR>
+"trailing whitespace
+match ErrorMsg '\s\+$'
+noremap <Leader>kw :%s/\s\+$//e<CR>
 
 nnoremap <leader>d :NERDTreeToggle<CR>
