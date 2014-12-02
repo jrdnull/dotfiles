@@ -1,0 +1,5 @@
+source ~/.vimrc
+
+nnoremap <Leader>gi :action GotoImplementation<Enter>
+nnoremap <Leader>gu :action FindUsages<Enter>
+
