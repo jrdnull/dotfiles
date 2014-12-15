@@ -14,9 +14,8 @@ __git_ps1() {
   true
 }
 
-# TODO: this will be in a different location on ubuntu
-if [[ -f /usr/share/git/completion/git-prompt.sh ]]; then
-  source /usr/share/git/completion/git-prompt.sh
+if [[ -f ~/.dotfiles/git-prompt.sh ]]; then
+  source ~/.dotfiles/git-prompt.sh
 fi
 
 GIT_PS1_SHOWDIRTYSTATE=1
