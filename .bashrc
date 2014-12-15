@@ -18,6 +18,11 @@ if [[ -f ~/.dotfiles/git-prompt.sh ]]; then
   source ~/.dotfiles/git-prompt.sh
 fi
 
+if [[ -f ~/.dotfiles/git-completion.bash ]]; then
+  source ~/.dotfiles/git-completion.bash
+fi
+
+
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
