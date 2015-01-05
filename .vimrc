@@ -13,6 +13,8 @@ Plugin 'tomasr/molokai'
 Plugin 'scrooloose/nerdtree'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'wincent/command-t'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'justincampbell/vim-eighties'
 
 call vundle#end()
 
@@ -24,6 +26,10 @@ set laststatus=2
 set number
 set ignorecase
 set smartcase
+set nowrap
+set hlsearch
+
+set mouse=a
 
 colorscheme molokai
 let g:molokai_original=1
@@ -49,3 +55,16 @@ match ErrorMsg '\s\+$'
 noremap <Leader>kw :%s/\s\+$//e<CR>
 
 nnoremap <leader>d :NERDTreeToggle<CR>
+
+let g:eighties_enabled = 1
+let g:eighties_minimum_width = 80
+let g:eighties_extra_width = 0 " Increase this if you want some extra room
+let g:eighties_compute = 1 " Disable this if you just want the minimum + extra
+
+" 80-column line
+set colorcolumn=81
+highlight! link ColorColumn CursorColumn
+
+" Exit insert mode with jk/kj
+inoremap jk <Esc>
+inoremap kj <Esc>
