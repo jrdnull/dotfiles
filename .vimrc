@@ -15,6 +15,8 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'wincent/command-t'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'justincampbell/vim-eighties'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'groenewege/vim-less'
 
 call vundle#end()
 
