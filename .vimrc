@@ -55,7 +55,7 @@ endif
 "trailing whitespace
 match ErrorMsg '\s\+$'
 noremap <Leader>kw :%s/\s\+$//e<CR>
-
+noremap <Leader>cs :let @/ = ""<CR>
 nnoremap <leader>d :NERDTreeToggle<CR>
 
 let g:eighties_enabled = 1
@@ -67,6 +67,5 @@ let g:eighties_compute = 1 " Disable this if you just want the minimum + extra
 set colorcolumn=81
 highlight! link ColorColumn CursorColumn
 
-" Exit insert mode with jk/kj
+" Exit insert mode with jk
 inoremap jk <Esc>
-inoremap kj <Esc>
