@@ -69,3 +69,10 @@ highlight! link ColorColumn CursorColumn
 
 " Exit insert mode with jk
 inoremap jk <Esc>
+
+" Unbind the cursor keys in insert, normal and visual modes.
+for prefix in ['i', 'n', 'v']
+  for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+    exe prefix . "noremap " . key . " <Nop>"
+  endfor
+endfor
