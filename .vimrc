@@ -30,6 +30,7 @@ set ignorecase
 set smartcase
 set nowrap
 set hlsearch
+set scrolloff=999 "keep cursor centered
 
 set mouse=a
 
