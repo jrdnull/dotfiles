@@ -45,6 +45,7 @@ set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
 set expandtab
+set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
@@ -77,3 +78,8 @@ for prefix in ['i', 'n', 'v']
     exe prefix . "noremap " . key . " <Nop>"
   endfor
 endfor
+
+" Include system specific settings
+if filereadable($HOME . "/.vimrc.local")
+  source ~/.vimrc.local
+endif
