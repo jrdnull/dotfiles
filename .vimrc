@@ -14,6 +14,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'justincampbell/vim-eighties'
 Plugin 'scrooloose/syntastic'
+Plugin 'rking/ag.vim'
 
 " Colour scheme
 Plugin 'tomasr/molokai'
