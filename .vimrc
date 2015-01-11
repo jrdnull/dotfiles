@@ -13,6 +13,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'justincampbell/vim-eighties'
+Plugin 'scrooloose/syntastic'
 
 " Colour scheme
 Plugin 'tomasr/molokai'
