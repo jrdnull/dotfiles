@@ -9,12 +9,22 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tomasr/molokai'
 Plugin 'scrooloose/nerdtree'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'wincent/command-t'
+Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'justincampbell/vim-eighties'
+
+" Colour scheme
+Plugin 'tomasr/molokai'
+
+" Elixir
+Plugin 'elixir-lang/vim-elixir'
+
+" JavaScript
+Plugin 'pangloss/vim-javascript'
+Plugin 'wookiehangover/jshint.vim'
+
+" CSS/LESS
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'groenewege/vim-less'
 
@@ -49,7 +59,6 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-
 if has("gui_running")
   set guifont=Source\ Code\ Pro\ 10
 endif
@@ -82,4 +91,16 @@ endfor
 " Include system specific settings
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
+endif
+
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
 endif
