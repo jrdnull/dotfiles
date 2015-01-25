@@ -2,3 +2,5 @@ README.md skip
 git-prompt.sh skip
 git-completion.bash skip
 bin recurse
+.vim recurse
+.vim/bundle recurse
