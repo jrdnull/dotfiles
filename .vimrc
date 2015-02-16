@@ -10,6 +10,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'justincampbell/vim-eighties'
@@ -28,7 +29,8 @@ Plugin 'elixir-lang/vim-elixir'
 
 " JavaScript
 Plugin 'pangloss/vim-javascript'
-Plugin 'wookiehangover/jshint.vim'
+Plugin 'Shutnik/jshint2.vim'
+Plugin 'heavenshell/vim-jsdoc'
 
 " CSS/LESS
 Plugin 'hail2u/vim-css3-syntax'
