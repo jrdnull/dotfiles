@@ -17,6 +17,7 @@ Plugin 'justincampbell/vim-eighties'
 Plugin 'scrooloose/syntastic'
 Plugin 'rking/ag.vim'
 Plugin 'ervandew/supertab'
+Plugin 'Yggdroot/indentLine'
 
 " Colour scheme
 Plugin 'tomasr/molokai'
