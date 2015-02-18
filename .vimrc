@@ -32,6 +32,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'pangloss/vim-javascript'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'heavenshell/vim-jsdoc'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " CSS/LESS
 Plugin 'hail2u/vim-css3-syntax'
