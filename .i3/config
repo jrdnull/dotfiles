@@ -27,7 +27,7 @@ font pango:Source Code Pro 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt 
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -64,7 +64,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in borizontal orientation
-bindsym $mod+b split h 
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -147,12 +147,13 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bindsym $mod+x move workspace to output right
+bindsym $mod+Shift+x move workspace to output left
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% # increase sound volume
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -5% # decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
-bindsym XF86AudioMicMute exec pactl set-source-mute 1 toggle # mute mic 
+bindsym XF86AudioMicMute exec pactl set-source-mute 1 toggle # mute mic
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
