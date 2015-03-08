@@ -62,6 +62,9 @@ set softtabstop=2
 " Exit insert mode with jk
 inoremap jk <Esc>
 
+" Map W to write as I hold shift too long
+command W w
+
 " Unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
