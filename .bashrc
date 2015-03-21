@@ -40,4 +40,6 @@ alias ls='ls --color=auto'
 alias ll='ls -lah'
 alias ..='cd ..'
 alias grep='grep --color=auto'
+alias emacs='emacs -nw'
+
 [[ -f ~/.bash_aliases ]] && source ~/.bash_aliases
