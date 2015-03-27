@@ -7,7 +7,7 @@
 
 ;; List of used packages
 (setq package-list '(evil evil-leader linum-relative fill-column-indicator
-                          projectile helm helm-projectile
+                          projectile helm helm-projectile yasnippet
                           key-chord neotree elixir-mode alchemist powerline
                           powerline-evil js2-mode jsx-mode git-gutter))
 
@@ -57,8 +57,9 @@
 (setq-default fill-column 80)
 (add-hook 'after-change-major-mode-hook 'fci-mode)
 
-;; No #backup-files#
+;; No backup-files, autosave
 (setq make-backup-files nil)
+(setq auto-save-default nil)
 
 ;; NeoTree
 (require 'neotree)
@@ -97,3 +98,7 @@
 
 ;; Git
 (global-git-gutter-mode 1)
+
+;; Snippets
+(require 'yasnippet)
+(yas-global-mode 1)

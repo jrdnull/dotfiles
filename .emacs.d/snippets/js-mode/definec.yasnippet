@@ -1,0 +1,15 @@
+#-*- mode: snippet -*-
+# name: define compose module
+# key: definec
+# --
+define(function (require) {
+    var compose = require('compose');
+
+    return compose(function ()
+    {
+        $0
+    },
+    {
+        $1
+    });
+});
