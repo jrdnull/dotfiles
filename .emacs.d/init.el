@@ -9,7 +9,7 @@
 (setq package-list '(evil evil-leader linum-relative fill-column-indicator
                           projectile helm helm-projectile yasnippet
                           key-chord neotree elixir-mode alchemist powerline
-                          powerline-evil js2-mode jsx-mode git-gutter))
+                          powerline-evil web-mode git-gutter))
 
 ;; Update package archive
 (unless package-archive-contents
@@ -64,7 +64,11 @@
 ;; NeoTree
 (require 'neotree)
 (evil-leader/set-key "d" 'neotree-toggle)
-
+  (add-hook 'neotree-mode-hook
+            (lambda ()
+              (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+              (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+              (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 ;; Helm
 (require 'helm-config)
 (helm-mode 1)
@@ -91,14 +95,13 @@
 (require 'powerline-evil)
 (powerline-evil-vim-color-theme)
 
-;; JavaScript
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
-(autoload 'jsx-mode "jsx-mode" "JSX mode" t)
-
 ;; Git
 (global-git-gutter-mode 1)
 
 ;; Snippets
 (require 'yasnippet)
 (yas-global-mode 1)
+
+;; Web mode
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
