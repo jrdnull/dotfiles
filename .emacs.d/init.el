@@ -6,10 +6,10 @@
 (package-initialize)
 
 ;; List of used packages
-(setq package-list '(evil evil-leader linum-relative fill-column-indicator
+(setq package-list '(linum-relative fill-column-indicator
                           projectile helm helm-projectile yasnippet
-                          key-chord neotree elixir-mode alchemist powerline
-                          powerline-evil web-mode git-gutter))
+                          key-chord neotree elixir-mode alchemist
+                          web-mode git-gutter))
 
 ;; Update package archive
 (unless package-archive-contents
@@ -19,22 +19,6 @@
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
-
-;; ---------------------------------
-;; EVIL
-;; ---------------------------------
-(require 'evil)
-(require 'evil-leader)
-(global-evil-leader-mode)
-(evil-mode t)
-
-;; Escape jk
-(require 'key-chord)
-(key-chord-mode 1)
-(key-chord-define evil-insert-state-map  "jk" 'evil-normal-state)
-;; ---------------------------------
-;; /EVIL
-;; ---------------------------------
 
 ;; Remove trailing whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -63,12 +47,7 @@
 
 ;; NeoTree
 (require 'neotree)
-(evil-leader/set-key "d" 'neotree-toggle)
-  (add-hook 'neotree-mode-hook
-            (lambda ()
-              (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
-              (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
-              (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+
 ;; Helm
 (require 'helm-config)
 (helm-mode 1)
@@ -87,13 +66,6 @@
 (projectile-global-mode)
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
-
-(evil-leader/set-key "p" 'helm-projectile-find-file)
-
-;; Powerline
-(require 'powerline)
-(require 'powerline-evil)
-(powerline-evil-vim-color-theme)
 
 ;; Git
 (global-git-gutter-mode 1)
