@@ -2,7 +2,8 @@
 # ~/.bash_profile
 #
 
-export EDITOR="vim"
+export EDITOR="emacs"
+export GOPATH="~/src/go"
 
 [[ -f ~/.profile ]] && source ~/.profile
 [[ -f ~/.bashrc ]] && source ~/.bashrc
