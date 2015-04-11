@@ -3,7 +3,7 @@
 #
 
 export EDITOR="emacs"
-export GOPATH="~/src/go"
+export GOPATH=~/src/go
 
 [[ -f ~/.profile ]] && source ~/.profile
 [[ -f ~/.bashrc ]] && source ~/.bashrc
