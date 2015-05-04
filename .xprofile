@@ -1,7 +1,0 @@
-setxkbmap gb
-xsetroot -cursor_name left_ptr
-xset -b
-xrdb -merge ~/.Xresources
-
-sh ~/.fehbg &
-
