@@ -36,7 +36,12 @@ prompt="\[\e[0;32m\]\u@\h\[\e[0;34m\]:\w\[\e[0m\]"
 PROMPT_COMMAND='__git_ps1 "$prompt" "% " " \[\e[0;33m\]on %s"; set_titlebar "$title"'
 
 # universal aliases, put system specific ones in ~/.bash_aliases
-alias ls='ls --color=auto'
+if [ "$(uname)" == "Darwin" ]; then
+    alias ls='ls -G'
+else
+    alias ls='ls --color=auto'
+fi
+
 alias ll='ls -lah'
 alias ..='cd ..'
 alias grep='grep --color=auto'
